@@ -25,11 +25,9 @@ function Search({ setWeatherDetails }) {
       axios
         .request(options)
         .then(function (response) {
-          console.log(response.data);
           setWeatherDetails(response.data)
         })
         .catch(function (error) {
-          console.error(error);
         });
     }
   }
