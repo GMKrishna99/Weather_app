@@ -4,25 +4,25 @@ import WeatherCloudy from '../assets/images/weather-cloudy.png'
 import Rain from '../assets/images/rain.png'
 import Humidity from '../assets/images/humidity.png'
 
-function WeatherCard() {
+function WeatherCard({weatherDetails }) {
   return (
     <div className='weather-section'>
         <div className='weather-card'>
             <div className='weather-temp-c'>
-                29<sup>o</sup>
+                {weatherDetails.current.temp_c}<sup>o</sup>
             </div>
             <div className='weather-info'>
                 <span>
                   <img src={Humidity} alt="" />
-                    68%
+                  {weatherDetails.current.humidity}
                 </span>
                 <span>
                     <img src={Rain} alt="" />
-                     25
+                    {weatherDetails.current.cloud}
                 </span>
             </div>
             <div className="weather-place">
-               Tirupati, Andhra Pradesh, India
+               {weatherDetails.location.name} ,{weatherDetails.location.region}, {weatherDetails.location.country}
             </div>
             <div className="weather-avatar">
                 <img src={WeatherCloudy} alt="" />

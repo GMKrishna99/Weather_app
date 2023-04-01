@@ -1,18 +1,20 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import Header from './components/Header';
 import Search from './components/Search';
 import WeatherCard from './components/WeatherCard';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [weatherDetails , setWeatherDetails] = React.useState(null)
 
   return (
     <div className="App">
       <div class="container">
         <Header/>
-        <Search/>
-        <WeatherCard/>
+        <Search setWeatherDetails={setWeatherDetails}/>
+       {
+        weatherDetails !== null ? <WeatherCard weatherDetails={weatherDetails}/> : null
+       }
         {/* <Footer/> */}
       </div>
     </div>

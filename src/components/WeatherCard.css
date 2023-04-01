@@ -15,7 +15,6 @@
 }
 .weather-temp-c {
     margin-top: -10px;
-    margin-bottom: 10px;
     font-weight: 400;
     font-size: 74px;
 }
@@ -38,8 +37,9 @@
 }
 .weather-place {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 18px;
     color: #c9c9c9;
+    word-spacing: 5px;
 }
 .weather-avatar {
     position: absolute;

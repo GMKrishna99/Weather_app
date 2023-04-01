@@ -2,15 +2,15 @@ import React from "react";
 import "./search.css";
 import axios from "axios";
 
-function Search() {
-  const [search, setSearch] = React.useState("");
+function Search({ setWeatherDetails }) {
+  const [search, setSearch] = React.useState('');
 
   function handleInput(e) {
+    setWeatherDetails(null)
     setSearch(e.target.value);
   }
   function handleKeyDown(e) {
     if (e.key === "Enter") {
-
       const options = {
         method: "GET",
         url: "https://weatherapi-com.p.rapidapi.com/current.json",
@@ -26,6 +26,7 @@ function Search() {
         .request(options)
         .then(function (response) {
           console.log(response.data);
+          setWeatherDetails(response.data)
         })
         .catch(function (error) {
           console.error(error);
