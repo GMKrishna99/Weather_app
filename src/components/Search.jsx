@@ -28,6 +28,7 @@ function Search({ setWeatherDetails }) {
           setWeatherDetails(response.data)
         })
         .catch(function (error) {
+          alert('Please entry a valid city name')
         });
     }
   }
