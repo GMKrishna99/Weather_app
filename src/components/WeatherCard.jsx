@@ -22,7 +22,7 @@ function WeatherCard({weatherDetails }) {
                 </span>
             </div>
             <div className="weather-place">
-               {weatherDetails.location.name} ,{weatherDetails.location.region}, {weatherDetails.location.country}
+               {weatherDetails.location.name}, {weatherDetails.location.region}, {weatherDetails.location.country}
             </div>
             <div className="weather-avatar">
                 <img src={WeatherCloudy} alt="" />
