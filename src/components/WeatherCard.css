@@ -17,6 +17,7 @@
     margin-top: -10px;
     font-weight: 400;
     font-size: 74px;
+    color: #cdc5ff;
 }
 .weather-info {
     display: flex;
@@ -29,7 +30,7 @@
     align-items: center;
     gap: 7px;
     font-size: 16px;
-    color: #c9c9c9;
+    color: #c9c9c9d1;
     font-weight: 600;
 }
 .weather-info span img{
@@ -37,15 +38,15 @@
 }
 .weather-place {
     margin-top: 10px;
-    font-size: 18px;
-    color: #c9c9c9;
+    font-size: 16px;
+    color: #c9c9c9d1;
     word-spacing: 5px;
 }
 .weather-avatar {
     position: absolute;
-    top: -60px;
-    right: -40px;
+    top: 45px;
+    right: -120px;
 }
 .weather-avatar img{
-    width: 70%;
+    width: 50%;
 }
